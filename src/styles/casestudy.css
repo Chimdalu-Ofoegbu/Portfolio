@@ -1,0 +1,201 @@
+/* ══════════════════════════════════
+   CASE STUDY PAGE
+   ══════════════════════════════════ */
+
+/* ── Back Button ── */
+.back-btn {
+  position: fixed;
+  top: 32px;
+  left: 32px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(250, 250, 250, 0.5);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: rgba(3, 3, 3, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: slideInLeft 0.6s var(--ease-reveal) 0.1s forwards;
+  cursor: pointer;
+}
+.back-btn:hover {
+  color: var(--text-primary);
+  border-color: rgba(250, 250, 250, 0.2);
+}
+.back-btn-arrow {
+  font-size: 18px;
+  transition: transform 0.3s var(--ease-hover);
+}
+.back-btn:hover .back-btn-arrow {
+  transform: translateX(-4px);
+}
+
+/* ── Outer Border Container ── */
+.case-outer-border {
+  width: var(--content-box-width);
+  max-width: calc(100% - 128px);
+  margin: 0 auto;
+  margin-top: 125.59px;
+  border: 1px solid var(--text-primary);
+  position: relative;
+  opacity: 0;
+  animation: borderReveal 1s ease 0.3s forwards;
+}
+
+/* ── Content Area ── */
+.case-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1138.339px;
+  margin: 0 auto;
+  padding: 138px 0 80px;
+  gap: var(--section-gap-lg);
+}
+
+/* ── Project Header ── */
+.case-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--card-gap-inner);
+  opacity: 0;
+  animation: fadeSlideUp 0.8s var(--ease-reveal) 0.5s forwards;
+}
+.case-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+.case-description {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.618;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* ── Spotlight Grid ── */
+.case-spotlight-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--section-gap-md);
+  width: 100%;
+}
+
+/* ── Spotlight Card ── */
+.case-spotlight-card {
+  width: 100%;
+  max-width: 1138.339px;
+  border: 0.715px solid var(--text-primary);
+  border-radius: var(--radius-case-card-outer);
+  padding: 11.434px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s var(--ease-hover);
+  opacity: 0;
+  animation: fadeSlideUp 0.8s var(--ease-reveal) forwards;
+}
+.case-spotlight-card.hovered {
+  border-color: var(--border-card-hover);
+  transform: translateY(-6px) scale(1.003);
+  box-shadow: 0 30px 80px rgba(250, 250, 250, 0.05),
+    0 0 0 1px rgba(250, 250, 250, 0.08);
+}
+
+.case-spotlight-inner {
+  background: var(--text-primary);
+  border-radius: var(--radius-case-card-inner);
+  padding: 45.735px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.case-spotlight-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  border-radius: var(--radius-case-image);
+  overflow: hidden;
+  transition: box-shadow 0.5s ease;
+}
+.case-spotlight-card.hovered .case-spotlight-img-wrap {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+.case-spotlight-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius-case-image);
+  pointer-events: none;
+  transition: transform 0.7s var(--ease-hover), filter 0.7s ease;
+}
+.case-spotlight-card.hovered .case-spotlight-img {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* ── Case Study Footer ── */
+.case-footer {
+  text-align: center;
+  padding: 80px 48px;
+  border-top: 1px solid rgba(250, 250, 250, 0.1);
+}
+.case-footer p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(250, 250, 250, 0.4);
+  letter-spacing: 1px;
+}
+
+/* ── Bottom Spacer ── */
+.case-bottom-spacer {
+  height: 120px;
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════ */
+@media (max-width: 768px) {
+  .back-btn {
+    top: 16px;
+    left: 16px;
+  }
+  .case-outer-border {
+    margin-top: 80px;
+    max-width: calc(100% - 32px);
+  }
+  .case-content {
+    padding: 80px 16px 60px;
+    gap: 80px;
+  }
+  .case-description {
+    font-size: 18px;
+  }
+  .case-spotlight-grid {
+    gap: 64px;
+  }
+  .case-spotlight-inner {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,88 @@
+/* ══════════════════════════════════
+   LIGHTBOX
+   ══════════════════════════════════ */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 3, 3, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  cursor: zoom-out;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-btn {
+  position: fixed;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.25);
+  background: rgba(250, 250, 250, 0.08);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+.lightbox-btn:hover {
+  background: rgba(250, 250, 250, 0.15);
+  border-color: rgba(250, 250, 250, 0.4);
+}
+
+.lightbox-close {
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+}
+
+.lightbox-prev {
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+}
+
+.lightbox-image-wrap {
+  animation: scaleIn 0.35s var(--ease-reveal);
+  cursor: default;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 32px;
+  user-select: none;
+  pointer-events: none;
+  border: 1px solid rgba(250, 250, 250, 0.35);
+}
+
+.lightbox-counter {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(250, 250, 250, 0.5);
+  z-index: 1001;
+}

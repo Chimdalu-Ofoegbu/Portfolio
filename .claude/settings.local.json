@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vite:*)",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(grep -E \"\\\\.\\(jsx|html|css|json\\)$\")",
+      "Bash(mkdir -p _archive)",
+      "Bash(mv \"bensage-homepage-editor.jsx\" \"Portfolio Recent.jsx\" \"ProjectPage.jsx\" \"Project View.jsx\" _archive/)",
+      "Bash(mv \"Portfolio Recent.html\" \"ProjectPage.html\" _archive/)"
+    ]
+  }
+}

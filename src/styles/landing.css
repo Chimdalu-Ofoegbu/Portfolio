@@ -1,0 +1,509 @@
+/* ══════════════════════════════════
+   LANDING PAGE
+   ══════════════════════════════════ */
+
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ── Grid Lines ── */
+.grid-line-v {
+  position: absolute;
+  top: -22px;
+  width: 0.5px;
+  height: 1288.5px;
+  background: var(--border-subtle);
+  transform-origin: top center;
+  z-index: 1;
+}
+.grid-line-v.left {
+  left: 10.28%;
+  animation: lineGrowY 1.4s var(--ease-reveal) 0.3s both;
+}
+.grid-line-v.right {
+  left: 89.72%;
+  animation: lineGrowY 1.4s var(--ease-reveal) 0.5s both;
+}
+.grid-line-h {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.5px;
+  background: var(--border-subtle);
+  transform-origin: left center;
+}
+.grid-line-h.top {
+  top: 38px;
+  animation: lineGrowX 1.2s var(--ease-reveal) 0.2s both;
+}
+.grid-line-h.bottom {
+  top: 126px;
+  animation: lineGrowX 1.2s var(--ease-reveal) 0.4s both;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 66px 64px 0;
+  min-height: 24px;
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  animation: slideDown 0.7s ease 0.1s forwards;
+}
+.header-marker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--text-primary);
+}
+.header-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 24px;
+}
+.header-brand {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.28;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: opacity 0.3s ease;
+}
+.header-brand:hover {
+  opacity: 0.7;
+}
+
+/* ── Hero ── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 78px;
+  position: relative;
+  z-index: 5;
+}
+.hero-heading {
+  font-weight: 800;
+  font-size: 88px;
+  line-height: 1.28;
+  text-align: center;
+  text-transform: uppercase;
+  width: 1034px;
+  max-width: calc(100% - 128px);
+  margin-top: 86px;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  animation: heroReveal 1s var(--ease-reveal) 0.5s forwards;
+}
+.hero-heading span {
+  display: block;
+}
+.hero-body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.618;
+  text-align: center;
+  width: 1008px;
+  max-width: calc(100% - 128px);
+  margin-top: 32px;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.7s forwards;
+}
+
+/* ── CTA Buttons ── */
+.ctas {
+  display: flex;
+  gap: 32px;
+  margin-top: 64px;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.9s forwards;
+}
+.cta-btn {
+  width: 388px;
+  height: 88px;
+  border-radius: var(--radius-cta);
+  font-family: 'Neue Machina', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.35s var(--ease-hover);
+  outline: none;
+  white-space: nowrap;
+  border: 1px solid var(--text-primary);
+  text-decoration: none;
+}
+.cta-btn.filled {
+  background: var(--text-primary);
+  color: var(--text-dark);
+}
+.cta-btn.filled:hover {
+  background: transparent;
+  color: var(--text-primary);
+  transform: translateY(-3px) rotate(-3.725deg);
+  box-shadow: 0 0 30px rgba(250, 250, 250, 0.15);
+}
+.cta-btn.outline {
+  background: transparent;
+  color: var(--text-primary);
+}
+.cta-btn.outline:hover {
+  background: var(--text-primary);
+  color: var(--text-dark);
+  transform: translateY(-3px) rotate(3.725deg);
+  box-shadow: 0 8px 32px rgba(250, 250, 250, 0.08);
+}
+.cta-arrow {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.cta-btn:hover .cta-arrow {
+  transform: rotate(0deg);
+}
+
+/* ── Spotlight Section ── */
+.spotlight-section {
+  margin-top: var(--section-gap-xl);
+}
+.divider {
+  width: 1144px;
+  max-width: calc(100% - 128px);
+  height: 0.5px;
+  margin: 0 auto;
+  background: var(--border-subtle);
+  transform-origin: center;
+  animation: lineGrowX 1s ease 1s both;
+}
+.tab-row {
+  display: flex;
+  justify-content: center;
+  max-width: 1144px;
+  margin: 0 auto;
+}
+.tab {
+  width: 572px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-hover);
+  user-select: none;
+  border: none;
+  background: none;
+}
+.tab.outline {
+  border: 1px solid var(--border-subtle);
+  color: var(--border-subtle);
+  font-weight: 400;
+}
+.tab.outline:hover {
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  background: rgba(250, 250, 250, 0.1);
+}
+.tab.filled {
+  background: var(--fill-primary);
+  color: var(--text-dark);
+  font-weight: 800;
+}
+
+.tab-content {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.tab-content.hidden {
+  display: none;
+}
+.tab-content.visible {
+  opacity: 1;
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+
+.border-box {
+  width: var(--content-box-width);
+  max-width: calc(100% - 128px);
+  margin: 0 auto;
+  border: 1px solid var(--border-subtle);
+  padding: 138px 92px 80px;
+}
+.spotlight-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.618;
+  text-align: center;
+  max-width: 1022px;
+  margin: 0 auto 145px;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 1.1s forwards;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap-xs);
+  width: var(--spotlight-content-width);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ── Spotlight Card ── */
+.spotlight-card {
+  border: 0.5px solid var(--border-card);
+  border-radius: var(--radius-card-outer);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.5s var(--ease-hover);
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.3s forwards;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.spotlight-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.spotlight-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-8px) scale(1.005);
+  box-shadow: 0 30px 100px rgba(250, 250, 250, 0.06),
+    0 0 0 1px rgba(250, 250, 250, 0.1);
+}
+.spotlight-inner {
+  border: 0.25px solid var(--border-subtle);
+  border-radius: var(--radius-card-inner);
+  height: 608px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: border 0.5s ease, box-shadow 0.5s ease;
+}
+.spotlight-card:hover .spotlight-inner {
+  border-color: rgba(250, 250, 250, 0.5);
+  box-shadow: inset 0 0 60px rgba(250, 250, 250, 0.03);
+}
+.spotlight-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: transform 0.7s var(--ease-hover), filter 0.7s ease;
+  border-radius: var(--radius-card-inner);
+}
+.spotlight-card:hover .spotlight-img {
+  transform: scale(1.04);
+  filter: brightness(1.08);
+}
+
+/* Card label overlay */
+.card-label {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-primary);
+  background: rgba(3, 3, 3, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(250, 250, 250, 0.15);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.4s var(--ease-hover);
+  z-index: 5;
+  pointer-events: none;
+}
+.spotlight-card:hover .card-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Projects Tab Placeholder ── */
+.project-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 250, 250, 0.03);
+  height: 100%;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  color: rgba(250, 250, 250, 0.4);
+}
+.project-placeholder-num {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.project-placeholder-title {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* ── Footer / Contact ── */
+.footer {
+  margin-top: 260px;
+  padding: 0 64px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.contact-row {
+  display: flex;
+  gap: 64px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact-link {
+  font-weight: 300;
+  font-size: 48px;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  line-height: normal;
+  white-space: nowrap;
+  transition: all 0.1s var(--ease-hover);
+}
+.contact-link:hover {
+  opacity: 1;
+  transform: scale(1.04);
+  color: rgba(250, 250, 250, 0.25);
+  transform-origin: center;
+  text-decoration: none;
+  filter: brightness(1.2);
+}
+.contact-arrow {
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  transition: transform 0.35s var(--ease-hover);
+}
+.contact-link:hover .contact-arrow {
+  transform: scale(1.2);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 56px;
+  }
+  .cta-btn {
+    width: 300px;
+    height: 72px;
+    font-size: 18px;
+  }
+  .tab {
+    width: 50%;
+    height: 120px;
+    font-size: 28px;
+  }
+  .border-box {
+    padding: 80px 48px 60px;
+  }
+  .spotlight-desc {
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+  .contact-link {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 32px 24px 0;
+  }
+  .header-brand {
+    font-size: 18px;
+  }
+  .header-num {
+    font-size: 18px;
+  }
+  .hero-heading {
+    font-size: 36px;
+    margin-top: 48px;
+  }
+  .hero-body {
+    font-size: 16px;
+  }
+  .ctas {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .cta-btn {
+    width: 100%;
+    max-width: 340px;
+    height: 64px;
+    font-size: 16px;
+  }
+  .spotlight-section {
+    margin-top: 160px;
+  }
+  .tab-row {
+    max-width: 100%;
+  }
+  .tab {
+    height: 80px;
+    font-size: 20px;
+  }
+  .border-box {
+    padding: 48px 16px 40px;
+  }
+  .spotlight-inner {
+    height: 300px;
+  }
+  .footer {
+    margin-top: 120px;
+    padding: 0 24px 80px;
+  }
+  .contact-row {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .contact-link {
+    font-size: 24px;
+  }
+  .grid-line-v,
+  .grid-line-h {
+    display: none;
+  }
+}
