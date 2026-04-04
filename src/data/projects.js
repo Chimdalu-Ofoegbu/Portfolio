@@ -11,7 +11,7 @@ export const projects = {
     slug: "blocknads",
     title: "BlockNads",
     subtitle: "Ad Blocker for Web3",
-    description: "Blurb on Project Description, Info and stuffs",
+    description: "A paradigm shift. The new order of defiance. An exclusive circle of explorers. Anon, do you even explore?",
     logo: "/images/blocknads-logo.png",
     cardImage: "/images/blocknads-card.jpg",
     spotlights: [

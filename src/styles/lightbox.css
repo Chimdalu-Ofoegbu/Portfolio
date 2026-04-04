@@ -89,3 +89,61 @@ video.lightbox-image {
   color: rgba(250, 250, 250, 0.5);
   z-index: 1001;
 }
+
+/* ── Lightbox Responsive ── */
+@media (max-width: 768px) {
+  .lightbox-image {
+    max-width: 96vw;
+    max-height: 80vh;
+    border-radius: 16px;
+  }
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .lightbox-prev {
+    left: 8px;
+  }
+  .lightbox-next {
+    right: 8px;
+  }
+  .lightbox-counter {
+    bottom: 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox-image {
+    max-width: 98vw;
+    border-radius: 10px;
+  }
+  .lightbox-close {
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .lightbox-prev {
+    left: 4px;
+  }
+  .lightbox-next {
+    right: 4px;
+  }
+}

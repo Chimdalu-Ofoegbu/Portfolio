@@ -143,8 +143,9 @@ export default function Resume() {
       {/* Download Resume */}
       <div className="resume-download-wrap">
         <a
-          href="/resume.pdf"
-          download
+          href="https://drive.google.com/file/d/1jKaVH4BTNxo1R_bL227R9w-vvSq8VVbY/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
           className="resume-download-btn"
         >
           Download Resume
