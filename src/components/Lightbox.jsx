@@ -60,11 +60,22 @@ export default function Lightbox({
         className="lightbox-image-wrap"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
-          className="lightbox-image"
-        />
+        {images[currentIndex].isVideo ? (
+          <video
+            key={images[currentIndex].src}
+            src={images[currentIndex].src}
+            controls
+            autoPlay
+            loop
+            className="lightbox-image"
+          />
+        ) : (
+          <img
+            src={images[currentIndex].src}
+            alt={images[currentIndex].alt}
+            className="lightbox-image"
+          />
+        )}
       </div>
 
       {/* Next */}

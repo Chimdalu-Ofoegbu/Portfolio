@@ -73,7 +73,7 @@ export default function CaseStudy() {
       }}
     >
       {/* Back Nav */}
-      <button className="back-btn" onClick={() => navigate("/")}>
+      <button className="back-btn" onClick={() => navigate(-1)}>
         <span className="back-btn-arrow">&larr;</span>
         Back
       </button>
@@ -104,6 +104,8 @@ export default function CaseStudy() {
                 alt={spotlight.alt}
                 hasBorder={spotlight.hasBorder}
                 cardBg={project.cardBg || null}
+                borderColor={project.borderColor || null}
+                isVideo={spotlight.isVideo || false}
                 index={index}
                 onClick={() => openLightbox(index)}
               />

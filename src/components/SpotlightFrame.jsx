@@ -5,10 +5,16 @@ export default function SpotlightFrame({
   alt,
   hasBorder = true,
   cardBg = null,
+  borderColor = null,
   index = 0,
+  isVideo = false,
   onClick,
 }) {
   const [hovered, setHovered] = useState(false);
+
+  const imgBorder = hasBorder
+    ? `1px solid ${borderColor || (cardBg ? "rgba(250,250,250,0.15)" : "#030303")}`
+    : "none";
 
   return (
     <div
@@ -22,18 +28,29 @@ export default function SpotlightFrame({
     >
       <div
         className="case-spotlight-inner"
-        style={cardBg ? { background: cardBg } : undefined}
+        style={cardBg ? { background: "transparent", padding: "11px", alignItems: "center" } : undefined}
       >
         <div
           className="case-spotlight-img-wrap"
-          style={{ border: hasBorder ? (cardBg ? "1px solid rgba(250,250,250,0.15)" : "1px solid #030303") : "none" }}
+          style={{ border: imgBorder }}
         >
-          <img
-            src={src}
-            alt={alt}
-            loading="lazy"
-            className="case-spotlight-img"
-          />
+          {isVideo ? (
+            <video
+              src={src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="case-spotlight-img"
+            />
+          ) : (
+            <img
+              src={src}
+              alt={alt}
+              loading="lazy"
+              className="case-spotlight-img"
+            />
+          )}
         </div>
       </div>
     </div>

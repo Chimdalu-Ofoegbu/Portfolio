@@ -140,6 +140,17 @@ export default function Resume() {
       {/* Divider */}
       <div className="resume-divider" />
 
+      {/* Download Resume */}
+      <div className="resume-download-wrap">
+        <a
+          href="/resume.pdf"
+          download
+          className="resume-download-btn"
+        >
+          Download Resume
+        </a>
+      </div>
+
       {/* Skills Section */}
       <div className="resume-section-title">Skills</div>
       <div className="skills-section">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import GridLines from "../components/GridLines";
@@ -8,7 +8,13 @@ import { projects } from "../data/projects";
 import "../styles/landing.css";
 
 export default function Landing() {
-  const [activeTab, setActiveTab] = useState("spotlight");
+  const [activeTab, setActiveTab] = useState(() => {
+    return sessionStorage.getItem("activeTab") || "spotlight";
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem("activeTab", activeTab);
+  }, [activeTab]);
 
   return (
     <div className="page">
@@ -32,7 +38,7 @@ export default function Landing() {
 
         <div className="ctas">
           <a
-            href="https://cal.com"
+            href="https://calendly.com/bensagesol/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-btn filled"
@@ -86,7 +92,7 @@ export default function Landing() {
                   src={projects.blocknads.cardImage}
                   alt="BlockNads"
                 />
-                <div className="card-label">View Case Study &rarr;</div>
+                <div className="card-label">View Screens &rarr;</div>
               </div>
             </Link>
 
@@ -101,7 +107,7 @@ export default function Landing() {
                   src={projects.rigit.cardImage}
                   alt="RigIt"
                 />
-                <div className="card-label">View Case Study &rarr;</div>
+                <div className="card-label">View Screens &rarr;</div>
               </div>
             </Link>
           </div>
@@ -117,42 +123,46 @@ export default function Landing() {
             craft.
           </p>
           <div className="cards">
-            <div className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
+            <Link to="/spotlight/whisper" className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
               <div className="spotlight-inner">
-                <div className="project-placeholder">
-                  <div>
-                    <div className="project-placeholder-num">01</div>
-                    <div className="project-placeholder-title">
-                      Whisper
-                    </div>
-                  </div>
-                </div>
+                <img
+                  className="spotlight-img"
+                  src={projects.whisper.cardImage}
+                  alt="Whisper"
+                />
+                <div className="card-label">View Screens &rarr;</div>
               </div>
-            </div>
-            <div className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
+            </Link>
+            <Link to="/spotlight/beradrome" className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
               <div className="spotlight-inner">
-                <div className="project-placeholder">
-                  <div>
-                    <div className="project-placeholder-num">02</div>
-                    <div className="project-placeholder-title">
-                      Beradrome — DeFi Liquidity Protocol
-                    </div>
-                  </div>
-                </div>
+                <img
+                  className="spotlight-img"
+                  src={projects.beradrome.cardImage}
+                  alt="Beradrome"
+                />
+                <div className="card-label">View Screens &rarr;</div>
               </div>
-            </div>
-            <div className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
+            </Link>
+            <Link to="/spotlight/fedixlabs" className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
               <div className="spotlight-inner">
-                <div className="project-placeholder">
-                  <div>
-                    <div className="project-placeholder-num">03</div>
-                    <div className="project-placeholder-title">
-                      Fedix Labs
-                    </div>
-                  </div>
-                </div>
+                <img
+                  className="spotlight-img"
+                  src={projects.fedixlabs.cardImage}
+                  alt="Fedix Labs"
+                />
+                <div className="card-label">View Screens &rarr;</div>
               </div>
-            </div>
+            </Link>
+            <Link to="/spotlight/blocknads-mint" className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
+              <div className="spotlight-inner">
+                <img
+                  className="spotlight-img"
+                  src={projects["blocknads-mint"].cardImage}
+                  alt="BlockNads Mint"
+                />
+                <div className="card-label">View Screens &rarr;</div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
