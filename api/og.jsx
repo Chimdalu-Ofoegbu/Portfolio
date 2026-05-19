@@ -46,9 +46,18 @@ const fallback = {
   accent: "#FAFAFA",
 };
 
+const staticOgImages = {
+  fastlane: "/images/fastlane-og.png",
+};
+
 export default function handler(req) {
-  const { searchParams } = new URL(req.url);
-  const slug = searchParams.get("project");
+  const url = new URL(req.url);
+  const slug = url.searchParams.get("project");
+
+  if (staticOgImages[slug]) {
+    return Response.redirect(new URL(staticOgImages[slug], url.origin), 302);
+  }
+
   const project = projects[slug] || fallback;
 
   return new ImageResponse(
