@@ -2,6 +2,20 @@
    CASE STUDY PAGE
    ══════════════════════════════════ */
 
+/* ── Live Embed ── */
+.case-live-wrap {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 50;
+}
+.case-live-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 /* ── Back Button ── */
 .back-btn {
   position: fixed;

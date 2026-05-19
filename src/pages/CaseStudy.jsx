@@ -62,6 +62,23 @@ export default function CaseStudy() {
     );
   }
 
+  if (project.liveUrl) {
+    return (
+      <div className="case-live-wrap">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          <span className="back-btn-arrow">&larr;</span>
+          Back
+        </button>
+        <iframe
+          className="case-live-iframe"
+          src={project.liveUrl}
+          title={project.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       style={{

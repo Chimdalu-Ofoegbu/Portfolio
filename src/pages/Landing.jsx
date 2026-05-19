@@ -81,6 +81,21 @@ export default function Landing() {
             to creating captivating experiences that transcend expectations.
           </p>
           <div className="cards">
+            {/* Fastlane Redesign */}
+            <Link
+              to="/spotlight/fastlane"
+              className="spotlight-card"
+            >
+              <div className="spotlight-inner">
+                <img
+                  className="spotlight-img"
+                  src={projects.fastlane.cardImage}
+                  alt="Fastlane Redesign"
+                />
+                <div className="card-label">View Live Implementation &rarr;</div>
+              </div>
+            </Link>
+
             {/* BlockNads */}
             <Link
               to="/spotlight/blocknads"
@@ -130,7 +145,7 @@ export default function Landing() {
                   src={projects.whisper.cardImage}
                   alt="Whisper"
                 />
-                <div className="card-label">View Screens &rarr;</div>
+                <div className="card-label">View Live Implementation &rarr;</div>
               </div>
             </Link>
             <Link to="/spotlight/beradrome" className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
@@ -140,7 +155,7 @@ export default function Landing() {
                   src={projects.beradrome.cardImage}
                   alt="Beradrome"
                 />
-                <div className="card-label">View Screens &rarr;</div>
+                <div className="card-label">View Live Implementation &rarr;</div>
               </div>
             </Link>
             <Link to="/spotlight/fedixlabs" className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
@@ -150,7 +165,7 @@ export default function Landing() {
                   src={projects.fedixlabs.cardImage}
                   alt="Fedix Labs"
                 />
-                <div className="card-label">View Screens &rarr;</div>
+                <div className="card-label">View Live Implementation &rarr;</div>
               </div>
             </Link>
             <Link to="/spotlight/blocknads-mint" className="spotlight-card" style={{ opacity: 1, animation: "none" }}>
@@ -160,7 +175,7 @@ export default function Landing() {
                   src={projects["blocknads-mint"].cardImage}
                   alt="BlockNads Mint"
                 />
-                <div className="card-label">View Screens &rarr;</div>
+                <div className="card-label">View Live Implementation &rarr;</div>
               </div>
             </Link>
           </div>

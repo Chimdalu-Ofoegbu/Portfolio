@@ -7,6 +7,65 @@
    ══════════════════════════════════ */
 
 export const projects = {
+  fastlane: {
+    slug: "fastlane",
+    title: "Fastlane Redesign",
+    subtitle: "DeFi Trading Terminal",
+    description: "A complete redesign of the Fastlane trading experience — streamlined interfaces, optimized flows, and a bold new visual direction.",
+    logo: "/images/blocknads-logo.png",
+    cardImage: "/images/fastlane-card.png",
+    liveUrl: "https://fastlane-sh-monad-bl3w.vercel.app/",
+    spotlights: [
+      {
+        src: "/images/blocknads/spotlight-1.jpg",
+        alt: "Fastlane Redesign — Hero / Landing",
+        height: 728,
+        hasBorder: true,
+      },
+      {
+        src: "/images/blocknads/spotlight-2.png",
+        alt: "Fastlane Redesign — Brand Identity",
+        height: 728,
+        hasBorder: true,
+      },
+      {
+        src: "/images/blocknads/spotlight-3.png",
+        alt: "Fastlane Redesign — Who We Are",
+        height: 728,
+        hasBorder: true,
+      },
+      {
+        src: "/images/blocknads/spotlight-4.png",
+        alt: "Fastlane Redesign — Team",
+        height: 1425,
+        hasBorder: true,
+      },
+      {
+        src: "/images/blocknads/spotlight-5.png",
+        alt: "Fastlane Redesign — Gallery",
+        height: 1006,
+        hasBorder: true,
+      },
+      {
+        src: "/images/blocknads/spotlight-6.png",
+        alt: "Fastlane Redesign — Footer",
+        height: 713,
+        hasBorder: false,
+      },
+      {
+        src: "/images/blocknads/spotlight-7.png",
+        alt: "Fastlane Redesign — Factions",
+        height: 728,
+        hasBorder: true,
+      },
+      {
+        src: "/images/blocknads/spotlight-8.png",
+        alt: "Fastlane Redesign — Brand Kit",
+        height: 728,
+        hasBorder: true,
+      },
+    ],
+  },
   blocknads: {
     slug: "blocknads",
     title: "BlockNads",
