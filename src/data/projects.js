@@ -376,27 +376,54 @@ export const projects = {
 
 export const experience = [
   {
-    company: "Beradrome",
-    role: "Product Designer",
-    duration: "June 2023 - February 2025",
+    company: "Mercor",
+    role: "Visual Design Expert",
+    duration: "Sep 2026 - Present",
     location: "Remote",
     description:
-      "Beradrome is a decentralized finance (DeFi) platform on the Berachain ecosystem, functioning as a native restaking and liquidity marketplace. It aims to provide protocols with efficient ways to build deep liquidity while addressing high interest rates and liquidation risks common in DeFi.",
+      "Write, review and validate prompt-based design tasks used to train AI on graphic and UI design workflows.",
     achievements: [
-      { text: "Revamped the complete ", bold: "Beradrome dApp", after: ", enhancing its functionality and user experience." },
-      { text: "Designed and Crafted ", bold: "bespoke illustration assets", after: " to elevate the visual aesthetic of the revamped Beradrome dApp." },
+      "Author prompts and reference responses that reflect real-world visual design process, from brief to finished asset",
+      "Validate each prompt-response pair against professional standards in typography, layout, colour and brand",
+      "Cover both graphic design and UI design tracks across multi-modal design workflows",
+    ],
+  },
+  {
+    company: "Mercor",
+    role: "Product Design/UX Expert",
+    duration: "Aug 2026 - Sep 2026",
+    location: "Remote",
+    description:
+      "Evaluate and rank AI-generated websites for a research project at a leading AI research lab.",
+    achievements: [
+      "Score each build on visual design quality, functional correctness, and instruction adherence",
+      "Test live sites directly, covering navigation, interactive controls, runtime errors, and responsive layouts",
+      "Write structured feedback that explains the reasoning behind every ranking",
+    ],
+  },
+  {
+    company: "Beradrome",
+    role: "Product Designer",
+    duration: "June 2023 - Feb 2025",
+    location: "Remote",
+    description:
+      "Led the full redesign of the Beradrome dApp on Berachain, improving functionality, usability, and visual consistency.",
+    achievements: [
+      "Designed custom illustration assets and visual components that elevated the dApp's brand and aesthetic",
+      "Worked with developers to ship a native restaking and liquidity marketplace UI that made complex DeFi simpler for users",
+      "Fixed critical UX pain points around interest rate displays and liquidation warnings to clarify financial risk",
     ],
   },
   {
     company: "Fedix Labs",
-    role: "UI UX Designer",
+    role: "UI/UX Designer",
     duration: "Nov 2022 - July 2023",
     location: "Remote",
     description:
-      "Fedix Labs provide the infrastructure for financial freedom by building products on a trustless and permission-less financial system. Fedix Finance is one of the many DeFi products to be rolled out of their product hub.",
+      "Designed the Fedix Labs landing page and built the visual identity for a trustless, permissionless financial infrastructure platform.",
     achievements: [
-      { text: "Designed the landing page for ", bold: "Fedix Labs", after: "" },
-      { text: "Designing the ", bold: "Fedix Finance", after: " on-chain perpetual swap for seamless user experience" },
+      "Led end-to-end UX on the Fedix Finance on-chain perpetual swap interface, optimizing trade execution flows",
+      "Created interaction patterns and UI components for order books, position management, and leverage controls",
     ],
   },
   {
@@ -405,10 +432,10 @@ export const experience = [
     duration: "Nov 2021 - Nov 2022",
     location: "Remote",
     description:
-      "Ayoken Labs is launching Ayoken, the first digital collectibles marketplace dedicated to empowering musicians and creatives.",
+      "Led design and prototyping for the Ayoken NFT Marketplace, the first collectibles platform built for musicians and creatives.",
     achievements: [
-      { text: "Designed and Prototyped the ", bold: "Ayoken NFT Marketplace", after: " components and assets" },
-      { text: "Designed marketing pitch decks utilized in proposal meetings by the executives of Ayoken Labs", bold: "", after: "" },
+      "Built reusable component libraries and marketplace UI patterns for NFT listing, minting, bidding, and collection management",
+      "Made executive pitch decks used in investor meetings that fed directly into fundraising and partnership work",
     ],
   },
   {
@@ -417,13 +444,11 @@ export const experience = [
     duration: "Aug 2021 - Sep 2022",
     location: "Remote",
     description:
-      "The 1Hive DAO has several products that are built on top of its decentralized platform, namely:",
-    descriptionBold: "Honeyswap, Gardens, and Quests",
+      "Contributed UI/UX to Gardens, a governance product serving 10+ communities and 3,000+ users including BrightID.",
     achievements: [
-      { text: "Contributed user interface and experience design to ", bold: "Gardens", after: " product serving over 10 communities (3000 users+), including Bright ID, the social identity network" },
-      { text: "Conducted user research and gathered feedback to inform the design of the ", bold: "Gardens & Quests", after: " product for managing community-driven projects and initiatives" },
-      { text: "Developed wireframes, prototypes, and high-fidelity designs for ", bold: "Gardens & Quest", after: " product, incorporating user-centered design principles and ensuring accessibility for diverse audiences." },
-      { text: "Collaborated with engineers and DAO council members to aid the implementation of new features on ", bold: "Gardens", after: " and also approve the wireframes and high-fidelity designs for Quests" },
+      "Ran user research and gathered qualitative feedback to inform iterative design across Gardens and Quests",
+      "Made wireframes, prototypes, and high-fidelity mockups using user-centered design and WCAG accessibility standards",
+      "Worked with engineers and DAO council members to scope features, validate design calls, and ship new functionality",
     ],
   },
 ];
@@ -435,12 +460,17 @@ export const skills = {
     "Interaction Design",
     "Wireframing",
     "Rapid Prototyping",
+    "Design Systems",
+    "Visual Design",
+    "Information Architecture",
   ],
-  other: [
+  research: [
     "User Research",
     "Usability Testing",
     "User Journey Mapping",
     "A/B Testing",
+    "Heuristic Evaluation",
+    "Competitive Analysis",
   ],
   tools: [
     "Figma",
@@ -448,8 +478,45 @@ export const skills = {
     "Adobe Illustrator",
     "Adobe Photoshop",
     "Notion",
+    "Framer",
+    "FigJam",
+    "Miro",
+  ],
+  domain: [
+    "DeFi (DEXs, Lending, Perpetuals)",
+    "NFT Marketplaces",
+    "DAO Governance",
+    "Web3 dApp Design",
+    "Blockchain UX",
   ],
 };
+
+export const education = [
+  {
+    degree: "Bachelors of Engineering (B.Eng)",
+    field: "Electrical and Electronics Engineering",
+    institution: "Federal University of Petroleum Resources, Effurun",
+    duration: "2020 - 2025",
+  },
+  {
+    degree: "Associates Degree",
+    field: "Electrical / Electronics Engineering",
+    institution: "Federal Polytechnic Oko",
+    duration: "2016 - 2018",
+  },
+  {
+    degree: "Data Science Fundamentals with Python and SQL Specialization",
+    field: null,
+    institution: "Coursera",
+    duration: "2026 - Present",
+  },
+  {
+    degree: "Google Foundations of UX Design",
+    field: null,
+    institution: "Coursera",
+    duration: "2026 - Present",
+  },
+];
 
 export const contact = {
   linkedin: "https://www.linkedin.com/in/ofoegbuchimdalu/",

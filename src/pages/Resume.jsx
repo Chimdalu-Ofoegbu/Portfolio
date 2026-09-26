@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { experience, skills, contact } from "../data/projects";
+import { experience, skills, education, contact } from "../data/projects";
 import "../styles/resume.css";
 
 function Achievement({ item }) {
@@ -44,8 +44,8 @@ export default function Resume() {
             Chimdalu Benedict{"\n"}Ofoegbu
           </h1>
           <p className="resume-tagline">
-            Designing decentralized and blockchain-based applications to
-            revolutionize user experiences, one project at a time.
+            Product Designer with 5+ years across decentralized applications,
+            blockchain platforms, and DeFi ecosystems.
           </p>
         </div>
 
@@ -143,58 +143,55 @@ export default function Resume() {
       {/* Download Resume */}
       <div className="resume-download-wrap">
         <a
-          href="https://drive.google.com/file/d/1jKaVH4BTNxo1R_bL227R9w-vvSq8VVbY/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/Chimdalu-Product-Design-Resume.pdf"
+          download
           className="resume-download-btn"
         >
           Download Resume
         </a>
       </div>
 
+      {/* Education Section */}
+      <div className="resume-section-title">Education</div>
+      <div className="education-cards">
+        {education.map((edu, i) => (
+          <div
+            key={i}
+            className="education-card"
+            style={{ animationDelay: `${0.2 + i * 0.1}s` }}
+          >
+            <div className="education-degree">{edu.degree}</div>
+            {edu.field && <div className="education-field">{edu.field}</div>}
+            <div className="education-meta">
+              <span className="education-institution">{edu.institution}</span>
+              <span className="education-duration">{edu.duration}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Divider */}
+      <div className="resume-divider" />
+
       {/* Skills Section */}
       <div className="resume-section-title">Skills</div>
       <div className="skills-section">
         <div className="skills-grid">
-          <div className="skill-column">
-            <div className="skill-box-title">Design</div>
-            <div className="skill-box">
-              <div className="skill-list">
-                {skills.design.map((skill) => (
-                  <div key={skill} className="skill-item">
-                    <div className="skill-diamond" />
-                    <span>{skill}</span>
-                  </div>
-                ))}
+          {Object.entries(skills).map(([category, items]) => (
+            <div key={category} className="skill-column">
+              <div className="skill-box-title">{category}</div>
+              <div className="skill-box">
+                <div className="skill-list">
+                  {items.map((skill) => (
+                    <div key={skill} className="skill-item">
+                      <div className="skill-diamond" />
+                      <span>{skill}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="skill-column">
-            <div className="skill-box-title">Other</div>
-            <div className="skill-box">
-              <div className="skill-list">
-                {skills.other.map((skill) => (
-                  <div key={skill} className="skill-item">
-                    <div className="skill-diamond" />
-                    <span>{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="skill-column">
-            <div className="skill-box-title">Tools</div>
-            <div className="skill-box">
-              <div className="skill-list">
-                {skills.tools.map((skill) => (
-                  <div key={skill} className="skill-item">
-                    <div className="skill-diamond" />
-                    <span>{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

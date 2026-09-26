@@ -327,7 +327,7 @@
 .skill-box-title {
   font-weight: 800;
   font-size: 48px;
-  text-transform: none;
+  text-transform: capitalize;
   color: var(--text-primary);
 }
 
@@ -358,6 +358,49 @@
   min-width: 8px;
   background: var(--text-primary);
   transform: rotate(45deg);
+}
+
+/* ── Education Section ── */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1144px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+.education-card {
+  border: 1px solid rgba(250, 250, 250, 0.12);
+  border-radius: 24px;
+  padding: 32px 40px;
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease forwards;
+  transition: border-color 0.3s ease;
+}
+.education-card:hover {
+  border-color: rgba(250, 250, 250, 0.25);
+}
+.education-degree {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.education-field {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.6);
+  margin-bottom: 12px;
+}
+.education-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(250, 250, 250, 0.4);
 }
 
 /* ── Resume Footer ── */
@@ -486,6 +529,20 @@
   .achievement-item {
     font-size: 16px;
   }
+  .education-cards {
+    padding: 0 24px;
+  }
+  .education-card {
+    padding: 24px 28px;
+  }
+  .education-degree {
+    font-size: 18px;
+  }
+  .education-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
   .resume-download-wrap {
     padding: 0 24px;
   }
@@ -577,6 +634,23 @@
     height: 6px;
     min-width: 6px;
     margin-top: 8px;
+  }
+  .education-cards {
+    padding: 0 16px;
+    gap: 16px;
+  }
+  .education-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  .education-degree {
+    font-size: 16px;
+  }
+  .education-field {
+    font-size: 13px;
+  }
+  .education-meta {
+    font-size: 12px;
   }
   .resume-download-wrap {
     padding: 0 16px;
